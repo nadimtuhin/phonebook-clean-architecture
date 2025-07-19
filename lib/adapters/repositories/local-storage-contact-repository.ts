@@ -1,5 +1,6 @@
 import { Contact, ContactData } from '@/lib/entities/contact';
 import { ContactRepository } from './contact-repository';
+import { dummyContacts } from '@/lib/data/dummy-contacts';
 
 export class LocalStorageContactRepository implements ContactRepository {
   private readonly storageKey = 'phone_book_contacts';
@@ -7,7 +8,11 @@ export class LocalStorageContactRepository implements ContactRepository {
   async getAll(): Promise<Contact[]> {
     try {
       const data = localStorage.getItem(this.storageKey);
-      if (!data) return [];
+      if (!data) {
+        // Initialize with dummy data if no contacts exist
+        await this.initializeDummyData();
+        return this.getAll();
+      }
       
       const contactsData: ContactData[] = JSON.parse(data);
       return contactsData.map(data => new Contact({
@@ -18,6 +23,15 @@ export class LocalStorageContactRepository implements ContactRepository {
     } catch (error) {
       console.error('Error loading contacts:', error);
       return [];
+    }
+  }
+
+  private async initializeDummyData(): Promise<void> {
+    try {
+      const contacts = dummyContacts.map(data => new Contact(data));
+      await this.saveAll(contacts);
+    } catch (error) {
+      console.error('Error initializing dummy data:', error);
     }
   }
 
