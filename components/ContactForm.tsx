@@ -107,7 +107,7 @@ export function ContactForm({
             onClick={addPhoneNumber}
             variant="ghost"
             size="sm"
-            className="text-primary-500 hover:text-primary-600"
+            className="text-blue-500 hover:text-blue-600"
           >
             <Plus className="w-4 h-4 mr-1" />
             Add Phone Number
@@ -150,7 +150,7 @@ export function ContactForm({
             onClick={addEmail}
             variant="ghost"
             size="sm"
-            className="text-primary-500 hover:text-primary-600"
+            className="text-blue-500 hover:text-blue-600"
           >
             <Plus className="w-4 h-4 mr-1" />
             Add Email Address
@@ -198,7 +198,7 @@ export function ContactForm({
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white"
+          className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white"
         >
           {isSubmitting ? 'Saving...' : submitLabel}
         </Button>

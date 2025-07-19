@@ -25,7 +25,7 @@ export function ContactCard({ contact, onEdit, onDelete }: ContactCardProps) {
             onClick={onEdit}
             variant="ghost"
             size="sm"
-            className="text-gray-400 hover:text-primary-500"
+            className="text-gray-400 hover:text-blue-500"
           >
             <Edit2 className="w-4 h-4" />
           </Button>
@@ -45,7 +45,7 @@ export function ContactCard({ contact, onEdit, onDelete }: ContactCardProps) {
           <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
           <a 
             href={`tel:${contact.primaryPhone}`}
-            className="text-gray-600 hover:text-primary-500 transition-colors"
+            className="text-gray-600 hover:text-blue-500 transition-colors"
           >
             {contact.primaryPhone}
           </a>
@@ -55,7 +55,7 @@ export function ContactCard({ contact, onEdit, onDelete }: ContactCardProps) {
           <Mail className="w-4 h-4 text-gray-400 flex-shrink-0" />
           <a 
             href={`mailto:${contact.primaryEmail}`}
-            className="text-gray-600 hover:text-primary-500 transition-colors truncate"
+            className="text-gray-600 hover:text-blue-500 transition-colors truncate"
           >
             {contact.primaryEmail}
           </a>

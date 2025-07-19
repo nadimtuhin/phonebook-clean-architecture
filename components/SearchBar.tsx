@@ -19,7 +19,7 @@ export function SearchBar({ searchTerm, onSearchChange, resultCount }: SearchBar
           placeholder="Search by name, phone, or email..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+          className="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
         />
         {searchTerm && (
           <button
