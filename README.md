@@ -2,6 +2,12 @@
 
 A modern phonebook application built with Next.js, TypeScript, and Clean Architecture principles. This application demonstrates a well-structured approach to building scalable React applications with proper separation of concerns.
 
+## 🚀 Live Demo
+
+**[View Live Application](https://phonebook-clean-architecture-1bzgxketu-nadim-tuhins-projects.vercel.app)**
+
+Try the app live to see all features in action!
+
 ## Features
 
 - **Contact Management**: Add, edit, delete, and view contacts
@@ -53,7 +59,7 @@ This project follows Clean Architecture principles with clear separation of laye
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/nadimtuhin/phonebook-clean-architecture.git
 cd phonebook-clean-architecture
 ```
 
