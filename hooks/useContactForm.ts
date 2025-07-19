@@ -27,8 +27,8 @@ export function useContactForm(initialData?: Partial<ContactData>) {
   const updateField = (field: keyof typeof formData, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     // Clear error for this field when user starts typing
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
+    if (errors[field as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [field as keyof FormErrors]: undefined }));
     }
   };
 

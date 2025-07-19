@@ -1,7 +1,7 @@
 import React from 'react';
 import { Contact } from '@/lib/entities/contact';
-import { Avatar } from '@/components/ui/Avatar';
-import { Button } from '@/components/ui/Button';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import { Edit2, Trash2, Phone, Mail, MapPin } from 'lucide-react';
 
 interface ContactCardProps {
@@ -15,7 +15,11 @@ export function ContactCard({ contact, onEdit, onDelete }: ContactCardProps) {
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <Avatar name={contact.fullName} />
+          <Avatar>
+            <AvatarFallback>
+              {contact.fullName.split(' ').map(n => n[0]).join('').toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
           <div>
             <h3 className="font-semibold text-gray-900">{contact.fullName}</h3>
           </div>

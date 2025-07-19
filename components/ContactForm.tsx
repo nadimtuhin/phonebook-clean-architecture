@@ -1,8 +1,8 @@
 import React from 'react';
 import { useContactForm } from '@/hooks/useContactForm';
 import { ContactData } from '@/lib/entities/contact';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Plus, X } from 'lucide-react';
 
 interface ContactFormProps {
